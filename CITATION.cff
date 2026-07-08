@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated article."
+title: "AEGIS: an evidence-gated reference implementation"
+authors:
+  - family-names: Wen
+    given-names: Ning
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/IMIT-PMCL/AEGIS"
+preferred-citation:
+  type: article
+  title: "AEGIS: an evidence-gated autonomous co-scientist for trustworthy cancer genotype-to-phenotype discovery across secure and public cohorts"
+  authors:
+    - family-names: Wen
+      given-names: Ning
+  year: 2026

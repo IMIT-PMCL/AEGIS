@@ -1,0 +1,16 @@
+# Example configuration for the OPTIONAL orchestration layer.
+# The scientific analyses and the evidence gate need NO model and ignore this file.
+#
+# Point these at any chat-completions-compatible inference server. No specific model,
+# vendor or endpoint is assumed or required. You may also set the equivalent
+# environment variables (AEGIS_LLM_BASE_URL / AEGIS_LLM_API_KEY / AEGIS_LLM_MODEL).
+
+llm:
+  base_url: "http://localhost:8000/v1"   # your inference server
+  api_key: ""                             # optional; leave empty for keyless local servers
+  model: "your-model-identifier"          # whatever your server expects
+
+gate:
+  null_quantile: 0.95   # a claim must beat this quantile of the permutation null
+  n_perm: 200           # permutations per null
+  seed: 0

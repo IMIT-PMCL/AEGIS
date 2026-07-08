@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aegis"
+version = "1.0.0"
+description = "AEGIS: an evidence-gated reference implementation for trustworthy autonomous discovery"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "Ning Wen", email = "wn12479@rjh.com.cn" }]
+keywords = ["evidence gating", "reproducibility", "held-out evaluation", "permutation null", "autonomous discovery"]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.8",
+    "pandas>=1.4",
+]
+
+[project.optional-dependencies]
+# only needed if you plug a model into the optional orchestration layer
+llm = ["requests>=2.28"]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+aegis = "aegis.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/IMIT-PMCL/AEGIS"
+
+[tool.setuptools.packages.find]
+include = ["aegis*"]
